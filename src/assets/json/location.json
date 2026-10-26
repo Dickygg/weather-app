@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jakarta",
+    "provinsi": "DKI Jakarta",
+    "latitude": -6.2088,
+    "longitude": 106.8456
+  },
+  {
+    "name": "Bandung",
+    "provinsi": "Jawa Barat",
+    "latitude": -6.9175,
+    "longitude": 107.6191
+  },
+  {
+    "name": "Surabaya",
+    "provinsi": "Jawa Timur",
+    "latitude": -7.2575,
+    "longitude": 112.7521
+  },
+  {
+    "name": "Depok",
+    "provinsi": "Jawa Barat",
+    "latitude": -6.402,
+    "longitude": 106.7942
+  }
+]

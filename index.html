@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather-app</title>
+    <style></style>
+  </head>
+  <body
+    class="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-40"
+    style="
+      background-image: url(&quot;./src/assets/anime-night-sky-illustration.jpg&quot;);
+    "
+  >
+    <div
+      class="mx-auto w-full max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-5 text-white shadow-xl shadow-black/10 backdrop-blur-md sm:p-8"
+    >
+      <div class="flex flex-col gap-4">
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-sm text-white/80">
+            <i class="fa-solid fa-cloud-sun text-lg"></i>
+            <span class="font-medium">Cuaca Saat Ini</span>
+          </div>
+
+          <button
+            id="refresh-button"
+            class="flex items-center gap-2 rounded-lg border border-white/20 px-3 py-2 text-sm transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            <i id="refresh-icon" class="fa-solid fa-rotate"></i>
+            <span id="refresh-text">Refresh</span>
+          </button>
+        </div>
+
+        <!-- Dropdown Lokasi -->
+        <div class="flex flex-col gap-2">
+          <label
+            for="location-select"
+            class="text-sm font-medium text-white/80"
+          >
+            <i class="fa-solid fa-location-dot mr-1"></i>
+            Pilih Lokasi
+          </label>
+          <select
+            id="location-select"
+            class="w-full rounded-xl border border-white/20 bg-slate-900/60 px-4 py-3 text-sm text-white outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/20"
+          ></select>
+        </div>
+
+        <!-- Data Cuaca -->
+        <div id="weather"></div>
+      </div>
+    </div>
+
+    <!-- Forecast 5 Hari -->
+    <section
+      class="mx-auto mt-6 w-full max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-5 text-white shadow-xl shadow-black/10 backdrop-blur-md sm:p-8"
+    >
+      <!-- Header -->
+      <div class="mb-6 flex items-center gap-3">
+        <div
+          class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-sky-200"
+        >
+          <i class="fa-solid fa-calendar-days text-xl"></i>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">Prakiraan Cuaca</h2>
+          <p class="text-sm text-white/60">5 hari ke depan</p>
+        </div>
+      </div>
+
+      <!-- Forecast List -->
+      <div
+        id="dailyWeather"
+        class="flex flex-col divide-y divide-white/15"
+      ></div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
