@@ -124,6 +124,7 @@ function getWeatherDescription(code) {
 
   return weatherCodes[code] ?? "Cuaca tidak diketahui";
 }
+
 const location = await getLocation();
 const select = document.querySelector("#location-select");
 select.innerHTML = location
@@ -131,8 +132,9 @@ select.innerHTML = location
     return `<option value="${item.name}">${item.name}, ${item.provinsi}</option>`;
   })
   .join("");
+
 let locationSelect = select.value;
-console.log(locationSelect);
+
 select.addEventListener("change", (e) => {
   const value = e.target.value;
   locationSelect = value;
@@ -270,6 +272,8 @@ async function renderWeatherDaily(selectLocation) {
         </div>`;
       })
       .join("");
+    document.querySelector("#dailyWeatherHeader").innerHTML =
+      `<p class="text-sm text-white/60">5 hari ke depan Di ${selectLocation}</p>`;
   } catch (error) {
     console.error("Gagal memperbarui cuaca:", error);
     dailyWeather.innerHTML = "<p>Oops..., Something Error Now</p>";

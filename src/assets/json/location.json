@@ -22,5 +22,11 @@
     "provinsi": "Jawa Barat",
     "latitude": -6.402,
     "longitude": 106.7942
+  },
+  {
+    "name": "Palembang",
+    "provinsi": "Sumatera Selatan",
+    "latitude": -2.99,
+    "longitude": 104.76
   }
 ]
